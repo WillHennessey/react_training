@@ -2,14 +2,14 @@
 
 ## Using JSX Elements
 You can't use the attribute `class` for JSX elements, you must use `className` which will be converted to class in HTML.
-```
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 const myDiv = <div className="big">I AM A BIG DIV</div>;
 ReactDOM.render(myDiv, document.getElementById('app'));
 ```
-In JSX you must include a closing slash (/) for self closing tags like <br> or <img>
-```
+In JSX you must include a closing slash (/) for self closing tags like `<br>` or `<img>`
+```jsx
 const profile = (
   <div>
     <h1>I AM JENKINS</h1>
@@ -24,26 +24,27 @@ const profile = (
   </div>
 );
 ```
-You can execute JS code within a JSX element by adding curly braces around the code
-```
+## JS injection in JSX
+You can execute JS code within a JSX element by adding curly braces around the code.
+```jsx
 ReactDOM.render(
   <h1>{2 + 3}</h1>, 
   document.getElementById('app')
 );
 ```
-A second example
-```
+A second example.
+```jsx
 const math = <h1>2 + 3 = {2 + 3}</h1>;
 ReactDOM.render(math, document.getElementById('app'));
 ```
 When you inject JavaScript into JSX, that JavaScript is part of the same environment as the rest of the JavaScript in your file.
 That means that you can access variables while inside of a JSX expression, even if those variables were declared on the outside.
-```
+```jsx
 const theBestString = 'tralalalala i am da best';
 ReactDOM.render(<h1>{theBestString}</h1>, document.getElementById('app'));
 ```
 When writing JSX it is common to use variables to set attributes.
-```
+```jsx
 const goose = 'https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-goose.jpg';
 
 const gooseImg = <img src={goose}/>;
@@ -51,7 +52,7 @@ ReactDOM.render(gooseImg, document.getElementById('app'));
 ```
 JSX components can have event listeners like HTML elements.
 JSX event listeners should be written in camelCase not lowercase.
-```
+```jsx
 function makeDoggy(e) {
   // Call this extremely useful function on an <img>.
   // The <img> will become a picture of a doggy.
@@ -71,7 +72,7 @@ ReactDOM.render(kitty, document.getElementById('app'));
 ## Conditionals
 You can not inject an if statement into a JSX expression.
 The below example will FAIL.
-```
+```jsx
 (
   <h1>
     {
@@ -83,7 +84,7 @@ The below example will FAIL.
 )
 ```
 This is an example of how to write a conditional with if/else statements
-```
+```jsx
 function coinToss() {
   // This function will randomly return either 'heads' or 'tails'.
   return Math.random() < 0.5 ? 'heads' : 'tails';
@@ -105,7 +106,7 @@ else {
 ReactDOM.render(img, document.getElementById('app'));
 ```
 You can also use the ternary operator in a JSX expression
-```
+```jsx
 function coinToss () {
   // Randomly return either 'heads' or 'tails'.
   return Math.random() < 0.5 ? 'heads' : 'tails';
@@ -123,7 +124,7 @@ ReactDOM.render(
 );
 ```
 You can use the `&&` conditional when you want to sometimes do an action
-```
+```jsx
 const judgmental = Math.random() < 0.5;
 
 const favoriteFoods = (

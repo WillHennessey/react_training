@@ -125,3 +125,39 @@ class TonightsPlan extends React.Component {
 }
 ReactDOM.render(<TonightsPlan/>, document.getElementById('app'));
 ```
+## Using `this` in a component
+Note that name isn't called with `()` because it is a get method.
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class MyName extends React.Component {
+	
+  get name() {
+    return 'Will Hennessey';
+  }
+
+  render() {
+    return <h1>My name is {this.name}.</h1>;
+  }
+}
+
+ReactDOM.render(<MyName />, document.getElementById('app'));
+```
+## Using an event listener in a component
+In React, you define event handlers as methods on a component class.
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class Button extends React.Component {
+  scream() {
+    alert('AAAAAAAAHHH!!!!!');
+  }
+
+  render() {
+    return <button onClick={this.scream}>AAAAAH!</button>;
+  }
+}
+ReactDOM.render(<Button/>, document.getElementById('app'));
+```

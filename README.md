@@ -17,3 +17,4 @@ React-102
 1. child_updates_parent_state.md
 1. child_updates_sibling.md
 1. video_player_project.md
+1. styles.md

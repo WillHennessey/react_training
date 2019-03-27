@@ -1,10 +1,17 @@
 # Notes while studying React
 https://www.codecademy.com/courses/react-101
+https://www.codecademy.com/courses/react-102
 
 Recommeded order for reading:
 
+React-101
 1. basic_notes.md
 1. components_notes.md
 1. components_interacting_notes.md
 1. props_notes.md
-1. state_notes_notes.md (Still WIP)
+1. state_notes_notes.md
+
+React-102
+1. stateless_inherit_stateful.md
+1. child_updates_parent_state.md
+1. child_updates_sibling.md

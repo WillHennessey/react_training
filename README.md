@@ -19,3 +19,4 @@ React-102
 1. video_player_project.md
 1. styles.md
 1. container_presentational_components.md
+1. stateless_functional_components.md

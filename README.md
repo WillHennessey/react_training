@@ -22,3 +22,4 @@ React-102
 1. stateless_functional_components.md
 1. proptypes.md
 1. react_forms.md
+1. mounting_lifecycle_methods.md
